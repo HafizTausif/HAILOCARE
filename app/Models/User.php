@@ -1,6 +1,7 @@
 <?php
 
-// app/Models/User.php
+
+
 namespace App\Models;
 
 use Illuminate\Contracts\Auth\MustVerifyEmail;
@@ -9,6 +10,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 use App\Models\Role;
+use Illuminate\Support\Facades\Storage;
 
 class User extends Authenticatable
 {
@@ -20,8 +22,9 @@ class User extends Authenticatable
         'password',
         'role_id',
         'phone',
-        'date_of_birth '=> 'date',
-        'gender'
+        'date_of_birth',
+        'gender',
+        'profile_picture' // Added profile picture field
     ];
 
     protected $hidden = [
@@ -31,6 +34,7 @@ class User extends Authenticatable
 
     protected $casts = [
         'email_verified_at' => 'datetime',
+        'date_of_birth' => 'date', // Fixed the typo (removed space)
     ];
 
     public function role()
@@ -61,5 +65,43 @@ class User extends Authenticatable
     public function isUser()
     {
         return $this->role_id === Role::USER;
+    }
+
+    /**
+     * Get the URL to the profile picture
+     * 
+     * @return string
+     */
+    public function getProfilePictureUrlAttribute()
+    {
+        if (!$this->profile_picture) {
+            return asset('images/default-profile.png'); // Default image path
+        }
+
+        // Check if it's already a full URL (for migrated data)
+        if (filter_var($this->profile_picture, FILTER_VALIDATE_URL)) {
+            return $this->profile_picture;
+        }
+
+        return Storage::disk('public')->url($this->profile_picture);
+    }
+
+    /**
+     * Delete the profile picture from storage
+     * 
+     * @return bool
+     */
+    public function deleteProfilePicture()
+    {
+        if (!$this->profile_picture) {
+            return false;
+        }
+
+        if (Storage::disk('public')->exists($this->profile_picture)) {
+            Storage::disk('public')->delete($this->profile_picture);
+            return true;
+        }
+
+        return false;
     }
 }

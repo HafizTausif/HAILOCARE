@@ -33,6 +33,16 @@
         <li><a href="{{ route('admin.clients.create') }}">Add New</a></li>
     </ul>
 </li>
+ <!-- Add this where you want the logout button to appear -->
+
+        <li>
+            <form method="POST" action="{{ route('logout') }}">
+                @csrf
+                <button type="submit" class="dropdown-item">
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                </button>
+            </form>
+        </li>
             <!-- Other menu items... -->
         </ul>
         

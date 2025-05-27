@@ -29,10 +29,12 @@
                                 <label>Phone</label>
                                 <input type="text" class="form-control" name="phone" value="{{ $caregiver->user->phone }}" required>
                             </div>
-                            <div class="form-group">
-                                <label>Date of Birth</label>
-                                <input type="date" class="form-control" name="date_of_birth" value="{{ $caregiver->user->date_of_birth->format('Y-m-d') }}" required>
-                            </div>
+                         <div class="form-group">
+    <label>Date of Birth</label>
+    <input type="date" class="form-control" name="date_of_birth" 
+           value="{{ $caregiver->user->date_of_birth ? \Carbon\Carbon::parse($caregiver->user->date_of_birth)->format('Y-m-d') : '' }}" 
+           required>
+</div>
                             <div class="form-group">
                                 <label>Gender</label>
                                 <select class="form-control" name="gender" required>

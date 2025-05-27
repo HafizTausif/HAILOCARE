@@ -22,9 +22,9 @@
 							<div class="card-body">
 								<div class="media align-items-center">
 									<div class="media-body">
-										<p class="mb-1">Total Patient</p>
+										<p class="mb-1">Total Clients</p>
 										<div class="d-flex flex-wrap">
-											<h2 class="fs-40 font-w600 text-white mb-0 me-3">783k</h2>
+											<h2 class="fs-40 font-w600 text-white mb-0 me-3">{{$Clientcount}}</h2>
 											<div>	
 												<svg width="28" height="19" viewBox="0 0 28 19" fill="none" xmlns="http://www.w3.org/2000/svg">
 													<path d="M8.56244 9.25C6.35869 11.6256 2.26214 16.0091 0.999939 17.5H26.4374V1L16.8124 13.375L8.56244 9.25Z" fill="url(#paint0_linear4)"/>
@@ -36,7 +36,7 @@
 													</linearGradient>
 													</defs>
 												</svg>
-												<div class="fs-14">+4%</div>
+												<div class="fs-14">+{{ round($Clientcount * 0.1) }}%</div>
 											</div>
 										</div>
 									</div>
@@ -218,215 +218,82 @@
 						</div>
 					</div>
 					<div class="col-xl-9 col-xxl-8 col-lg-7">
-						<div class="card">	
-							<div class="card-header border-0 pb-0">
-								<h3 class="fs-20 mb-0 text-black">Top Rated Doctors</h3>
-								<a href="page-review.html" class="text-primary font-w500">View more >></a>
-							</div>
-							<div class="card-body">
-								<div class="assigned-doctor owl-carousel">
-									<div class="items">
-										<div class="text-center">
-											<img src="images/doctors/5.jpg" alt="" >
-											<div class="dr-star"><i class="las la-star"></i> 4.2</div>
-											<h5 class="fs-16 mb-1 font-w600"><a class="text-black" href="page-review.html">Dr. Alexandro Jr.</a></h5>
-											<span class="text-primary mb-2 d-block">Dentist</span>
-											<p class="fs-12">795 Folsom Ave, Suite 600 San Francisco, CADGE 94107</p>
-											<div class="social-media">
-												<a href="javascript:void(0);"><i class="lab la-instagram"></i></a>
-												<a href="javascript:void(0);"><i class="lab la-facebook-f"></i></a>
-												<a href="javascript:void(0);"><i class="lab la-twitter"></i></a>
-											</div>
-										</div>
-									</div>
-									<div class="items">
-										<div class="text-center">
-											<img src="images/doctors/1.jpg" alt="" >
-											<div class="dr-star"><i class="las la-star"></i> 4.1</div>
-											<h5 class="fs-16 mb-1 font-w600"><a class="text-black" href="page-review.html">Dr. Samantha</a></h5>
-											<span class="text-primary mb-2 d-block">Physical Therapy</span>
-											<p class="fs-12">795 Folsom Ave, Suite 600 San Francisco, CADGE 94107</p>
-											<div class="social-media">
-												<a href="javascript:void(0);"><i class="lab la-instagram"></i></a>
-												<a href="javascript:void(0);"><i class="lab la-facebook-f"></i></a>
-												<a href="javascript:void(0);"><i class="lab la-twitter"></i></a>
-											</div>
-										</div>
-									</div>
-									<div class="items">
-										<div class="text-center">
-											<img src="images/doctors/2.jpg" alt="" >
-											<div class="dr-star"><i class="las la-star"></i> 4.3</div>
-											<h5 class="fs-16 mb-1 font-w600"><a class="text-black" href="page-review.html">Dr. Aliandro M</a></h5>
-											<span class="text-primary mb-2 d-block">Nursing</span>
-											<p class="fs-12">795 Folsom Ave, Suite 600 San Francisco, CADGE 94107</p>
-											<div class="social-media">
-												<a href="javascript:void(0);"><i class="lab la-instagram"></i></a>
-												<a href="javascript:void(0);"><i class="lab la-facebook-f"></i></a>
-												<a href="javascript:void(0);"><i class="lab la-twitter"></i></a>
-											</div>
-										</div>
-									</div>
-									<div class="items">
-										<div class="text-center">
-											<img  src="images/doctors/3.jpg" alt="" >
-											<div class="dr-star"><i class="las la-star"></i> 4.4</div>
-											<h5 class="fs-16 mb-1 font-w600"><a class="text-black" href="page-review.html">Dr. Samuel</a></h5>
-											<span class="text-primary mb-2 d-block">Gynecologist</span>
-											<p class="fs-12">795 Folsom Ave, Suite 600 San Francisco, CADGE 94107</p>
-											<div class="social-media">
-												<a href="javascript:void(0);"><i class="lab la-instagram"></i></a>
-												<a href="javascript:void(0);"><i class="lab la-facebook-f"></i></a>
-												<a href="javascript:void(0);"><i class="lab la-twitter"></i></a>
-											</div>
-										</div>
-									</div>
-									<div class="items">
-										<div class="text-center">
-											<img src="images/doctors/4.jpg" alt="" >
-											<div class="dr-star"><i class="las la-star"></i> 3.2</div>
-											<h5 class="fs-16 mb-1 font-w600"><a class="text-black" href="page-review.html">Dr. Melinda</a></h5>
-											<span class="text-primary mb-2 d-block">Dentist</span>
-											<p class="fs-12">795 Folsom Ave, Suite 600 San Francisco, CADGE 94107</p>
-											<div class="social-media">
-												<a href="javascript:void(0);"><i class="lab la-instagram"></i></a>
-												<a href="javascript:void(0);"><i class="lab la-facebook-f"></i></a>
-												<a href="javascript:void(0);"><i class="lab la-twitter"></i></a>
-											</div>
-										</div>
-									</div>
-									<div class="items">
-										<div class="text-center">
-											<img src="images/doctors/1.jpg" alt="" >
-											<div class="dr-star"><i class="las la-star"></i> 4.2</div>
-											<h5 class="fs-16 mb-1 font-w600"><a class="text-black" href="page-review.html">Dr. Alexandro Jr.</a></h5>
-											<span class="text-primary mb-2 d-block">Dentist</span>
-											<p class="fs-12">795 Folsom Ave, Suite 600 San Francisco, CADGE 94107</p>
-											<div class="social-media">
-												<a href="javascript:void(0);"><i class="lab la-instagram"></i></a>
-												<a href="javascript:void(0);"><i class="lab la-facebook-f"></i></a>
-												<a href="javascript:void(0);"><i class="lab la-twitter"></i></a>
-											</div>
-										</div>
-									</div>
-									<div class="items">
-										<div class="text-center">
-											<img  src="images/doctors/2.jpg" alt="" >
-											<div class="dr-star"><i class="las la-star"></i> 2.2</div>
-											<h5 class="fs-16 mb-1 font-w600"><a class="text-black" href="page-review.html">Dr. Aliandro M</a></h5>
-											<span class="text-primary mb-2 d-block">Nursing</span>
-											<p class="fs-12">795 Folsom Ave, Suite 600 San Francisco, CADGE 94107</p>
-											<div class="social-media">
-												<a href="javascript:void(0);"><i class="lab la-instagram"></i></a>
-												<a href="javascript:void(0);"><i class="lab la-facebook-f"></i></a>
-												<a href="javascript:void(0);"><i class="lab la-twitter"></i></a>
-											</div>
-										</div>
-									</div>
-									<div class="items">
-										<div class="text-center">
-											<img src="images/doctors/3.jpg" alt="" >
-											<div class="dr-star"><i class="las la-star"></i> 1.2</div>
-											<h5 class="fs-16 mb-1 font-w600"><a class="text-black" href="page-review.html">Dr. Samuel</a></h5>
-											<span class="text-primary mb-2 d-block">Gynecologist</span>
-											<p class="fs-12">795 Folsom Ave, Suite 600 San Francisco, CADGE 94107</p>
-											<div class="social-media">
-												<a href="javascript:void(0);"><i class="lab la-instagram"></i></a>
-												<a href="javascript:void(0);"><i class="lab la-facebook-f"></i></a>
-												<a href="javascript:void(0);"><i class="lab la-twitter"></i></a>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
+
+    <div class="card">    
+        <div class="card-header border-0 pb-0">
+            <h3 class="fs-20 mb-0 text-black">Our Caretakers</h3>
+            <a href="{{ route('admin.caregivers.index') }}" class="text-primary font-w500">View all >></a>
+        </div>
+        <div class="card-body">
+            <div class="assigned-doctor owl-carousel">
+                @foreach($caregivers as $caregiver)
+                <div class="items">
+                    <div class="text-center">
+                        @if($caregiver->profile_picture)
+                        <img src="{{ asset('storage/'.$caregiver->profile_picture) }}" 
+                             alt="{{ $caregiver->name }}" 
+                             class="rounded-circle" 
+                             width="120">
+                        @else
+                        <img src="{{ asset('images/default-profile.png') }}" 
+                             alt="{{ $caregiver->name }}" 
+                             class="rounded-circle" 
+                             width="120">
+                        @endif
+                        <h5 class="fs-16 mb-1 font-w600">
+                            <a class="text-black" href="{{ route('admin.caregivers.show', $caregiver->caregiver->id ?? $caregiver->id) }}">
+                                {{ $caregiver->name }}
+                            </a>
+                        </h5>
+                        <span class="text-primary mb-2 d-block">
+                            {{ $caregiver->caregiver->specialization ?? 'Senior Care' }}
+                        </span>
+                        <p class="fs-12">
+                            {{ $caregiver->caregiver->experience ?? 'Experienced caregiver' }}
+                        </p>
+                    </div>
+                </div>
+                @endforeach
+            </div>
+        </div>
+    </div>
+</div>
 					<div class="col-xl-3 col-xxl-4 col-lg-5">
-                        <div class="card border-0 pb-0">
-                            <div class="card-header flex-wrap border-0 pb-0">
-                                <h3 class="fs-20 mb-0 text-black">Recent Patient</h3>
-								<a href="patient-list.html" class="text-primary font-w500">View more >></a>
+    <div class="card border-0 pb-0">
+        <div class="card-header flex-wrap border-0 pb-0">
+            <h3 class="fs-20 mb-0 text-black">Recent Clients</h3>
+            <a href="{{ route('admin.clients.index') }}" class="text-primary font-w500">View more >></a>
+        </div>
+        <div class="card-body recent-patient px-0"> 
+            <div id="DZ_W_Todo2" class="widget-media px-4 dz-scroll height320">
+                <ul class="timeline">
+                    @foreach($recentClients as $client)
+                    <li>
+                        <div class="timeline-panel flex-wrap">
+                            <div class="media me-3">
+                                @if($client->user->profile_picture)
+                                <img class="rounded-circle" alt="{{ $client->user->name }}" width="50" src="{{ asset('storage/'.$client->user->profile_picture) }}">
+                                @else
+                                <img class="rounded-circle" alt="{{ $client->user->name }}" width="50" src="{{ asset('images/default-profile.png') }}">
+                                @endif
                             </div>
-                            <div class="card-body recent-patient px-0"> 
-                                <div id="DZ_W_Todo2" class="widget-media px-4 dz-scroll height320">
-                                    <ul class="timeline">
-                                        <li>
-                                            <div class="timeline-panel flex-wrap">
-												<div class="media me-3">
-													<img class="rounded-circle" alt="image" width="50" src="images/widget/1.jpg">
-												</div>
-                                                <div class="media-body">
-													<h5 class="mb-1"><a class="text-black" href="patient-details.html">Aziz Bakree</a></h5>
-													<span class="fs-14">24 Years</span>
-												</div>
-												<a href="javascript:void(0);" class="text-warning mt-2">Pending</a>
-											</div>
-                                        </li>
-                                        <li>
-                                            <div class="timeline-panel flex-wrap">
-												<div class="media me-3">
-													<img class="rounded-circle" alt="image" width="50" src="images/widget/2.jpg">
-												</div>
-                                                <div class="media-body">
-													<h5 class="mb-1"><a class="text-black" href="patient-details.html">Griezerman</a></h5>
-													<span class="fs-14">24 Years</span>
-												</div>
-												<a href="javascript:void(0);" class="text-info mt-2">On Recovery</a>
-											</div>
-                                        </li>
-                                        <li>
-                                            <div class="timeline-panel flex-wrap">
-												<div class="media me-3">
-													<img class="rounded-circle" alt="image" width="50" src="images/widget/3.jpg">
-												</div>
-                                                <div class="media-body">
-													<h5 class="mb-1"><a class="text-black" href="patient-details.html">Oconner</a></h5>
-													<span class="fs-14">24 Years</span>
-												</div>
-												<a href="javascript:void(0);" class="text-danger mt-2">Rejected</a>
-											</div>
-                                        </li>
-										 <li>
-                                            <div class="timeline-panel flex-wrap">
-												<div class="media me-3">
-													<img class="rounded-circle" alt="image" width="50" src="images/widget/5.jpg">
-												</div>
-                                                <div class="media-body">
-													<h5 class="mb-1"><a class="text-black" href="patient-details.html">Uli Trumb</a></h5>
-													<span class="fs-14">24 Years</span>
-												</div>
-												<a href="javascript:void(0);" class="text-primary mt-2">Recovered</a>
-											</div>
-                                        </li>
-                                        <li>
-                                            <div class="timeline-panel flex-wrap">
-												<div class="media me-3">
-													<img class="rounded-circle" alt="image" width="50" src="images/widget/1.jpg">
-												</div>
-                                                <div class="media-body">
-													<h5 class="mb-1"><a class="text-black" href="patient-details.html">Aziz Bakree</a></h5>
-													<span class="fs-14">24 Years</span>
-												</div>
-												<a href="javascript:void(0);" class="text-warning mt-2">Pending</a>
-											</div>
-                                        </li>
-                                        <li>
-                                            <div class="timeline-panel flex-wrap">
-												<div class="media me-3">
-													<img class="rounded-circle" alt="image" width="50" src="images/widget/2.jpg">
-												</div>
-                                                <div class="media-body">
-													<h5 class="mb-1"><a class="text-black" href="patient-details.html">Aziz Bakree</a></h5>
-													<span class="fs-14">24 Years</span>
-												</div>
-												<a href="javascript:void(0);" class="text-warning mt-2">Pending</a>
-											</div>
-                                        </li>
-                                    </ul>
-                                </div>
+                            <div class="media-body">
+                                <h5 class="mb-1"><a class="text-black" href="{{ route('admin.clients.show', $client->id) }}">{{ $client->user->name }}</a></h5>
+                                <span class="fs-14">
+                                    {{ $client->user->date_of_birth ? \Carbon\Carbon::parse($client->user->date_of_birth)->age.' Years' : 'Age not specified' }}
+                                </span>
                             </div>
+                            <span class="mt-2">
+                                {{ $client->created_at->diffForHumans() }}
+                            </span>
                         </div>
-					</div>
+                    </li>
+                    @endforeach
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
 				</div>
             </div>
         </div>

@@ -28,6 +28,25 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('index') }}">Home</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('about') }}">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('service') }}">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('pricing') }}">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('signup') }}">signup</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('caregiver') }}">Become a Caregiver</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('contact') }}">Contact</a>
+                    </li>
+                    
                     @auth
                         @if(auth()->user()->isAdmin())
                             <li class="nav-item">
@@ -43,9 +62,6 @@
                             </li>
                         @endif
                     @endauth
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('contact') }}">Contact</a>
-                    </li>
                 </ul>
 
                 @auth

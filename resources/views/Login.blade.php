@@ -51,304 +51,210 @@
                 </div>
 
                 <!-- Tab content sections -->
-                <div id="caregiver" class="role-content active">
-                    <div class="details forms">
-                        <form>
-                            <div class="mb-3">
-                                <div class="row">
-                                    <div class="col-md-6 col-sm-12">
-                                        <input type="text" class="form-control" id="username" required
-                                            placeholder="John">
-                                    </div>
-                                    <div class="col-md-6 col-sm-12">
-
-                                        <input type="text" class="form-control" id="username" required
-                                            placeholder="Doe">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="mb-3">
-                                <div class="row">
-                                    <div class="col-md-6 col-sm-12">
-
-                                        <input type="date" class="form-control" id="username" required
-                                            placeholder="Date Of Birth">
-                                    </div>
-                                    <div class="col-md-6 col-sm-12">
-                                        <select name="cars" id="gender" class="form-control">
-                                            <option value="volvo">Gender</option>
-                                            <option value="volvo">Man</option>
-                                            <option value="saab">Female</option>
-                                            <option value="opel">Other</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <div class="mb-3">
-                                <div class="row">
-                                    <div class="col-md-6 col-sm-12">
-
-                                        <input type="tel" class="form-control" id="phone" required required
-                                            placeholder="+1 (234) 567 789">
-                                    </div>
-                                    <div class="col-md-6 col-sm-12">
-                                        <input type="email" class="form-control" id="email" required
-                                            placeholder="testingemail@gmail.com">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="mb-3">
-                                <div class="row">
-                                    <div class="col-md-6 col-sm-12">
-                                        <input type="Psswrd" class="form-control" id="phone" required required
-                                            placeholder="Password">
-                                    </div>
-                                    <div class="col-md-6 col-sm-12">
-
-                                        <input type="Psswrd" class="form-control" id="Psswrd" required
-                                            placeholder="Conform Password">
-                                    </div>
-                                </div>
-                            </div>
-
-
-
-                            <div class="mb-3">
-                                <div class="row">
-                                    <div class="col-md-6 col-sm-12">
-
-                                        <input type="text" class="form-control" id="phone" required required
-                                            placeholder="Social Security">
-                                    </div>
-                                    <div class="col-md-6 col-sm-12">
-
-                                        <input type="file" class="form-control" id="Psswrd" required
-                                            placeholder="Drivers License Upload (Front+Back)">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="mb-3">
-                                <div class="row">
-                                    <div class="col-md-3 col-sm-6">
-
-                                        <input type="text" class="form-control" id="Brand" required required
-                                            placeholder="Brand">
-                                    </div>
-                                    <div class="col-md-3 col-sm-6">
-
-                                        <input type="text" class="form-control" id="Model" required
-                                            placeholder="Model Car">
-                                    </div>
-                                    <div class="col-md-3 col-sm-6">
-
-                                        <input type="text" class="form-control" id="Model" required
-                                            placeholder="Model Car">
-                                    </div>
-                                    <div class="col-md-3 col-sm-6">
-
-                                        <input type="number" class="form-control" id="Model" required
-                                            placeholder="Car Plate Number">
-                                    </div>
-                                </div>
-                            </div>
-
-
-
-                            <div class="mb-3">
-                                <div class="row">
-                                    <div class="col-md-6 col-sm-12">
-
-                                        <input type="number" class="form-control" id="number" required required
-                                            placeholder="Home Care Aid Number">
-                                    </div>
-                                    <div class="col-md-6 col-sm-12">
-
-                                        <input type="file" class="form-control" id="Psswrd" required
-                                            placeholder="Certifications Upload">
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <div class="mb-3">
-                                <div class="row">
-                                    <div class="col-md-6 col-sm-12">
-
-                                        <select name="cars" id="gender" class="form-control">
-                                            <option value="volvo">Languages spoken Select</option>
-                                            <option value="saab">Lorem, ipsum.</option>
-                                            <option value="opel">Lorem, ipsum.</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-md-6 col-sm-12">
-
-                                        <input type="file" class="form-control" id="Psswrd" required
-                                            placeholder="Profile Picture Upload">
-                                    </div>
-                                </div>
-                            </div>
-
-
-
-                            <div class="mb-3">
-                                <input class="form-check-input" type="checkbox" value="" id="acceptTerms" required>
-                                <label class="form-check-label" for="acceptTerms"> Lorem Ipsum is simply dummy text of
-                                    the printing and typesetting industry. Lorem Ipsum
-                                    has been the industry's standard dummy text ever since the 1500s, when an unknown
-                                    printer took a galley of type and scrambled it to make a type specimen book. It has
-                                    survived not only five centuries, but also the leap into electronic typesetting,
-                                    remaining essentially unchanged. It was popularised in the 1960s with the release of
-                                    Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
-                                    publishing software like Aldus PageMaker including versions of Lorem Ipsum.</a>
-                                </label>
-                            </div>
-
-                            <button href="#" class="Bttn more">Sign Up</button>
-                        </form>
-
+            <div id="caregiver" class="role-content active">
+    <div class="details forms">
+<form method="POST" action="{{ route('caregiver.register') }}" enctype="multipart/form-data">
+            @csrf
+            <div class="mb-3">
+                <div class="row">
+                    <div class="col-md-6 col-sm-12">
+                        <input type="text" class="form-control" name="first_name" required placeholder="First Name">
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <input type="text" class="form-control" name="last_name" required placeholder="Last Name">
                     </div>
                 </div>
+            </div>
 
-                <div id="client" class="role-content">
-                    <div class="details forms">
-                        <form>
-                            <div class="mb-3">
-                                <div class="row">
-                                    <div class="col-md-6 col-sm-12">
-
-                                        <input type="text" class="form-control" id="username" required
-                                            placeholder="John">
-                                    </div>
-                                    <div class="col-md-6 col-sm-12">
-
-                                        <input type="text" class="form-control" id="username" required
-                                            placeholder="Doe">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="mb-3">
-                                <div class="row">
-                                    <div class="col-md-6 col-sm-12">
-
-                                        <input type="date" class="form-control" id="username" required
-                                            placeholder="Date Of Birth">
-                                    </div>
-                                    <div class="col-md-6 col-sm-12">
-
-                                        <select name="cars" id="gender" class="form-control">
-                                            <option value="volvo">Gender</option>
-                                            <option value="volvo">Man</option>
-                                            <option value="saab">Female</option>
-                                            <option value="opel">Other</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <div class="mb-3">
-                                <div class="row">
-                                    <div class="col-md-6 col-sm-12">
-
-                                        <input type="tel" class="form-control" id="phone" required required
-                                            placeholder="+1 (234) 567 789">
-                                    </div>
-                                    <div class="col-md-6 col-sm-12">
-
-                                        <input type="email" class="form-control" id="email" required
-                                            placeholder="testingemail@gmail.com">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="mb-3">
-                                <div class="row">
-                                    <div class="col-md-6 col-sm-12">
-
-                                        <input type="Psswrd" class="form-control" id="phone" required required
-                                            placeholder="Password">
-                                    </div>
-                                    <div class="col-md-6 col-sm-12">
-
-                                        <input type="Psswrd" class="form-control" id="Psswrd" required
-                                            placeholder="Conform Password">
-                                    </div>
-                                </div>
-                            </div>
-
-
-
-                            <div class="mb-3">
-                                <div class="row">
-                                    <div class="col-md-12 col-sm-12">
-
-                                        <input type="text" class="form-control" id="phone" required required
-                                            placeholder="Phone Number (verification?)">
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <div class="mb-3">
-                                <div class="row">
-                                    <div class="col-md-6 col-sm-12">
-
-                                        <input type="text" class="form-control" id="Relationship" required required
-                                            placeholder="Relationship to Profile">
-                                    </div>
-                                    <div class="col-md-6 col-sm-12">
-                                        <select name="cars" id="gender" class="form-control">
-                                            <option value="volvo">Health Conditions</option>
-                                            <option value="volvo">Lorem, ipsum dolor.</option>
-                                            <option value="saab">Lorem, ipsum dolor.</option>
-                                            <option value="opel">Lorem, ipsum dolor.</option>
-                                        </select>
-                                    </div>
-
-                                </div>
-                            </div>
-
-
-
-                            <div class="mb-3">
-                                <div class="row">
-                                    <div class="col-md-12 col-sm-12">
-
-                                        <input type="date" class="form-control" id="date" required required
-                                            placeholder="Date Of Birth">
-                                    </div>
-
-                                </div>
-                            </div>
-
-
-
-
-                            <div class="mb-3">
-                                <input class="form-check-input" type="checkbox" value="" id="acceptTerms" required>
-                                <label class="form-check-label" for="acceptTerms">
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                    Ipsum
-                                    has been the industry's standard dummy text ever since the 1500s, when an unknown
-                                    printer took a galley of type and scrambled it to make a type specimen book. It has
-                                    survived not only five centuries, but also the leap into electronic typesetting,
-                                    remaining essentially unchanged. It was popularised in the 1960s with the release of
-                                    Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
-                                    publishing software like Aldus PageMaker including versions of Lorem Ipsum.</a>
-                                </label>
-                            </div>
-
-                            <button href="#" class="Bttn more">Sign Up</button>
-                        </form>
-
+            <div class="mb-3">
+                <div class="row">
+                    <div class="col-md-6 col-sm-12">
+                        <input type="date" class="form-control" name="date_of_birth" required>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <select name="gender" class="form-control" required>
+                            <option value="">Select Gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
                     </div>
                 </div>
+            </div>
+
+            <div class="mb-3">
+                <div class="row">
+                    <div class="col-md-6 col-sm-12">
+                        <input type="tel" class="form-control" name="phone" required placeholder="Phone Number">
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <input type="email" class="form-control" name="email" required placeholder="Email">
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <div class="row">
+                    <div class="col-md-6 col-sm-12">
+                        <input type="password" class="form-control" name="password" required placeholder="Password">
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <input type="password" class="form-control" name="password_confirmation" required placeholder="Confirm Password">
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <div class="row">
+                    <div class="col-md-6 col-sm-12">
+                        <input type="text" class="form-control" name="social_security" placeholder="Social Security">
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <input type="file" class="form-control" name="driver_license_front" accept="image/*">
+                        <small class="text-muted">Driver's License Front</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <div class="row">
+                    <div class="col-md-6 col-sm-12">
+                        <input type="text" class="form-control" name="car_brand" placeholder="Car Brand">
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <input type="text" class="form-control" name="car_model" placeholder="Car Model">
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <div class="row">
+                    <div class="col-md-6 col-sm-12">
+                        <input type="text" class="form-control" name="car_plate_number" placeholder="License Plate Number">
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <input type="text" class="form-control" name="home_care_aid_number" placeholder="Home Care Aid Number">
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <div class="row">
+                    <div class="col-md-6 col-sm-12">
+                        <input type="file" class="form-control" name="certifications[]" multiple accept="image/*,application/pdf">
+                        <small class="text-muted">Certifications (multiple allowed)</small>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <input type="file" class="form-control" name="profile_picture" accept="image/*">
+                        <small class="text-muted">Profile Picture</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <input class="form-check-input" type="checkbox" name="terms" id="acceptTerms" required>
+                <label class="form-check-label" for="acceptTerms">
+                    I agree to the terms and conditions
+                </label>
+            </div>
+
+            <button type="submit" class="Bttn more">Sign Up</button>
+        </form>
+    </div>
+</div>
+
+      <div id="client" class="role-content">
+    <div class="details forms">
+<form method="POST" action="{{ route('client.register') }}" enctype="multipart/form-data">
+            @csrf
+            <div class="mb-3">
+                <div class="row">
+                    <div class="col-md-6 col-sm-12">
+                        <input type="text" class="form-control" name="name" required placeholder="First Name">
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <input type="text" class="form-control" name="last_name" required placeholder="Last Name">
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <div class="row">
+                    <div class="col-md-6 col-sm-12">
+                        <input type="date" class="form-control" name="date_of_birth" required>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <select name="gender" class="form-control" required>
+                            <option value="">Select Gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <div class="row">
+                    <div class="col-md-6 col-sm-12">
+                        <input type="tel" class="form-control" name="phone" required placeholder="Phone Number">
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <input type="email" class="form-control" name="email" required placeholder="Email">
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <div class="row">
+                    <div class="col-md-6 col-sm-12">
+                        <input type="password" class="form-control" name="password" required placeholder="Password">
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <input type="password" class="form-control" name="password_confirmation" required placeholder="Confirm Password">
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <div class="row">
+                    <div class="col-md-6 col-sm-12">
+                        <input type="text" class="form-control" name="relationship_to_profile" placeholder="Relationship to Profile">
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <input type="text" class="form-control" name="health_conditions[]" placeholder="Health Conditions (comma separated)">
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12">
+                        <textarea class="form-control" name="special_requirements" placeholder="Special Requirements"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12">
+                        <input type="file" class="form-control" name="profile_picture" accept="image/*">
+                        <small class="text-muted">Profile Picture</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <input class="form-check-input" type="checkbox" name="terms" id="acceptTerms" required>
+                <label class="form-check-label" for="acceptTerms">
+                    I agree to the terms and conditions
+                </label>
+            </div>
+
+            <button type="submit" class="Bttn more">Sign Up</button>
+        </form>
+    </div>
+</div>
 
             </div>
 
@@ -356,7 +262,41 @@
     </div>
 </section>
 
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Handle health conditions input for client form
+    const healthConditionsInput = document.querySelector('input[name="health_conditions[]"]');
+    if (healthConditionsInput) {
+        healthConditionsInput.addEventListener('change', function() {
+            const conditions = this.value.split(',').map(item => item.trim()).filter(item => item);
+            this.value = JSON.stringify(conditions);
+        });
+    }
 
+    // Form validation
+    const forms = document.querySelectorAll('form');
+    forms.forEach(form => {
+        form.addEventListener('submit', function(e) {
+            const checkboxes = this.querySelectorAll('input[type="checkbox"][required]');
+            let allChecked = true;
+            
+            checkboxes.forEach(checkbox => {
+                if (!checkbox.checked) allChecked = false;
+            });
+
+            if (!allChecked) {
+                e.preventDefault();
+                alert('Please accept the terms and conditions');
+            }
+        });
+    });
+});
+
+// Role switching function (keep your existing one)
+function switchRole(role, element) {
+    // Your existing role switching code
+}
+</script>
 
 
 
